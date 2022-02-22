@@ -1,1 +1,0 @@
-# seolhee-choi.github.io
