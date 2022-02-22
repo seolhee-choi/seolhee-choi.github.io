@@ -134,11 +134,11 @@
   }
 
   img {
-    max-width: 110px;
-    border-radius: 50%;
+    max-width: 175px;
+    border-radius: 10%;
 
     @include breakpoint($large) {
-      padding: 5px;
+      padding: 0px;
       border: 1px solid $border-color;
     }
   }
@@ -179,6 +179,7 @@
 
 .author__bio {
   margin: 0;
+  font-size: 18px;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -191,6 +192,7 @@
   display: table-cell;
   vertical-align: middle;
   font-family: $sans-serif;
+  font-size: 18px;
   z-index: 20;
   cursor: pointer;
 

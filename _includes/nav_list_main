@@ -48,7 +48,7 @@
         <span class="nav__sub-title">etc</span>    
              <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "정보처리기사" %}
+                    {% if category[0] == "Jcg" %}
                         <li><a href="/categories/jcg" class="">정보처리기사({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
