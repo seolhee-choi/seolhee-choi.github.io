@@ -1,5 +1,5 @@
 ---
-title : "GET방식으로 할인 쿠폰 발급하는 방법"
+title : "GET 방식으로 할인 쿠폰 발급하는 방법"
 categories:
  - Php
 tags:
@@ -13,19 +13,13 @@ last_modified_at: 2022-02-22
 
 ---
 
-## 매일 수강인증한 회원에 한해 특정 쿠폰이 발급되어야 한다는 내용의 요청을 받았다.
-#### 운영팀에서 인증한 회원의 ID를 게시판에 등록하면 해당 게시글의 idx값을 확인한 후, 아래 소스코드가 작성된 페이지 경로와 아까 idx값만 수동으로 호출해주면 되게끔하였다.
-#### 카카오 알림톡(현재 회사에서는 별도로 사용하는 api가 있음)도 전송 + 쿠폰 발급 로그
+##### 매일 수강인증한 회원에 한해 특정 쿠폰이 발급되어야 한다는 내용의 요청을 받았다.
+##### 운영팀에서 인증한 회원의 ID를 게시판에 등록하면, 나는 해당 게시글의 idx값만 확인한 후 수동으로 호출해주면 되게끔 하였다.
+##### 추가기능(카카오 알림톡 - 현재 회사에서는 별도로 사용하는 api가 있음) + 쿠폰 발급 로그
 
 
 ```php
 @session_start();
-
-include $_SERVER["DOCUMENT_ROOT"] . "/include/pbkdf2.compat.php";
-include $_SERVER["DOCUMENT_ROOT"] ."/2022/include/func_common.inc_new.php";
-include $_SERVER["DOCUMENT_ROOT"] ."/include/func_mysqld.inc.php";
-include $_SERVER["DOCUMENT_ROOT"] ."/include/func_user.inc.php";
-include $_SERVER["DOCUMENT_ROOT"] ."/include/func_randing.php";
 
 MySQLConnectDB();
 
@@ -138,7 +132,7 @@ for($i=0; $i<count($useridarray); $i++) {
 }
 ```
 
-밑에는 insert_condition_log 함수 내용
+밑에는 insert_condition_log 함수 내용(공통 파일에 넣어져있다)
 
 ```php
 /*
@@ -169,6 +163,6 @@ function insert_condition_log($userid, $event_idx, $event_type, $condition_value
 }
 ```
 
-이렇게 소스코드로 짜여진 coupon.php파일을 도메인에 idx값만 변경해서 입력하면
-해당하는 사람들에게 해당 쿠폰(수강인증 할인쿠폰)이 자동으로 발급되고 카카오톡으로 안내톡도 발송된다.
-EX) https://www.test.kr/coupon.php?idx=7
+##### 이렇게 소스코드로 짜여진 coupon.php 파일을 도메인에 idx값과 함께 수동으로 입력하면
+##### 해당하는 사람들에게 해당 쿠폰(수강인증 할인쿠폰)이 자동으로 발급되고 카카오 안내톡도 발송된다.
+##### EX) https://www.test.kr/coupon.php?idx=7
