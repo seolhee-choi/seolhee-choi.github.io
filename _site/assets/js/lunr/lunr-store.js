@@ -22,4 +22,10 @@ var store = [{
         "tags": ["ubuntu"],
         "url": "/ubuntu/ubuntuopen/",
         "teaser": null
+      },{
+        "title": "There are no gemspecs at 오류 발생시 해결방안",
+        "excerpt":"깃허브 블로그를 local에서 실행하려고 해당 명령어를 입력한 순간,   bundle exec jekyll serve        아래와 같은 에러가 발생했다.                               [!] There was an error parsing `Gemfile`: There are no gemspecs at /home/ashley/seolhee-choi.github.io. Bundler cannot continue.                                      사진에 있는 Gemfile을 눌러서 들어간뒤                                      #gemspec 하단에 아래 3줄을 추가했다.                                              다시 'bundle exec jekyll serve' 명령어 입력해보면 정상으로 작동되는 것이 확인됨                 ","categories": ["ETC"],
+        "tags": ["etc"],
+        "url": "/etc/bundlererror/",
+        "teaser": null
       }]

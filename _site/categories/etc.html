@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Year - Ash Blog</title>
+<!-- begin _includes/seo.html --><title>ETC - Ash Blog</title>
 <meta name="description" content="이것저것 기록 일지.">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Ash Blog">
-<meta property="og:title" content="Posts by Year">
-<meta property="og:url" content="http://localhost:4000/year-archive/">
+<meta property="og:title" content="ETC">
+<meta property="og:url" content="http://localhost:4000/categories/etc">
 
 
   <meta property="og:description" content="이것저것 기록 일지.">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/year-archive/">
+<link rel="canonical" href="http://localhost:4000/categories/etc">
 
 
 
@@ -92,7 +92,7 @@
 
   </head>
 
-  <body class="layout--posts">
+  <body class="layout--archive">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -259,6 +259,104 @@
   
 
   
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+             <span style="font-size:13px;">📑 전체 글 수</style> <span>5</style> <span style="font-size:13px;">개</style> 
+      </li>
+      <li>
+        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+        <span class="nav__sub-title">programming/DB</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    
+                
+                    
+                        <li><a href="/categories/java" class="">JAVA (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                        <li><a href="/categories/php" class="">PHP (2)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+         <span class="nav__sub-title">Server</span>    
+             <ul>
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/ubuntu" class="">Ubuntu(1)</a></li>
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">etc</span>    
+             <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/etc" class="">etc(1)</a></li>
+                    
+                
+            </ul>
+        </li>
+  </ul>
+</nav>
+  
   
   </div>
 
@@ -266,246 +364,32 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Posts by Year</h1>
+      <h1 id="page-title" class="page__title">ETC</h1>
     
     
-
-
-<ul class="taxonomy__index">
-  
-  
-    <li>
-      <a href="#2022">
-        <strong>2022</strong> <span class="taxonomy__count">5</span>
-      </a>
-    </li>
-  
-</ul>
-
-
-
-
-  <section id="2022" class="taxonomy__section">
-    <h2 class="archive__subtitle">2022</h2>
-    <div class="entries-list">
-      
-        
-
-
-
-
 <div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/etc/bundlererror/" rel="permalink">There are no gemspecs at 오류 발생시 해결방안
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/etc/bundlererror/">There are no gemspecs at 오류 발생시 해결방안</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.03.11
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
         
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">깃허브 블로그를 local에서 실행하려고 해당 명령어를 입력한 순간,
-</p>
-  </article>
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#etc" class="page__taxonomy-item-category" rel="tag">ETC</a>
+                    
+                    
+                    <a href="/tags/#etc" class="page__taxonomy-item-tag" rel="tag">etc</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
 </div>
-
-      
-        
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ubuntu/ubuntuopen/" rel="permalink">Ubuntu폴더 윈도우(windows)에서 열기
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">windows를 사용하면서 wsl을 설치해 ubuntu를 사용하는 사람이라면
-윈도우에서 ubuntu 폴더를 열어보고 싶은 경우가 있다.
-그럴 때 간단하게 사용하는 명령어는
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/php/couponsend/" rel="permalink">GET 방식으로 할인 쿠폰 발급하는 방법
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">매일 수강인증한 회원에 한해 특정 쿠폰이 발급되어야 한다는 내용의 요청을 받았다.
-운영팀에서 인증한 회원의 ID를 게시판에 등록하면, 나는 해당 게시글의 idx값만 확인한 후 수동으로 호출해주면 되게끔 하였다.
-추가기능(카카오 알림톡 - 현재 회사에서는 별도로 사용하는 api가 있...</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/java/intellij-post/" rel="permalink">IntelliJ IDEA 윈도우 단축키
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">[IntelliJ IDEA 윈도우버전 단축키]
-
-ctrl + alt + v : 변수 추출(Extract Variable) Optional 불러옴
-ctrl + alt + m : 리팩토링 단축키(Extract Method)
-
-shift + f6 : 폴더 및 파일명 변경(Rename)
-...</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/php/first-post/" rel="permalink">포스팅 테스트
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">포스팅 테스트중 🎈
-</p>
-  </article>
-</div>
-
-      
-    </div>
-    <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
-  </section>
-
 
   </div>
 </div>

@@ -17,7 +17,14 @@
 <lastmod>2022-03-10T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/etc/bundlererror/</loc>
+<lastmod>2022-03-11T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/categories/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/categories/etc</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/java</loc>

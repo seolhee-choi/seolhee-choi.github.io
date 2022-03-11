@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-11T17:07:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ash Blog</title><subtitle>이것저것 기록 일지.</subtitle><author><name>Ashley</name></author><entry><title type="html">Ubuntu폴더 윈도우(windows)에서 열기</title><link href="http://localhost:4000/ubuntu/ubuntuopen/" rel="alternate" type="text/html" title="Ubuntu폴더 윈도우(windows)에서 열기" /><published>2022-03-10T00:00:00+09:00</published><updated>2022-03-10T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu/ubuntuopen</id><content type="html" xml:base="http://localhost:4000/ubuntu/ubuntuopen/"><![CDATA[<p>windows를 사용하면서 wsl을 설치해 ubuntu를 사용하는 사람이라면
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-11T18:10:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ash Blog</title><subtitle>이것저것 기록 일지.</subtitle><author><name>Ashley</name></author><entry><title type="html">There are no gemspecs at 오류 발생시 해결방안</title><link href="http://localhost:4000/etc/bundlererror/" rel="alternate" type="text/html" title="There are no gemspecs at 오류 발생시 해결방안" /><published>2022-03-11T00:00:00+09:00</published><updated>2022-03-11T00:00:00+09:00</updated><id>http://localhost:4000/etc/bundlererror</id><content type="html" xml:base="http://localhost:4000/etc/bundlererror/"><![CDATA[<p>깃허브 블로그를 local에서 실행하려고 해당 명령어를 입력한 순간,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve 
+</code></pre></div></div>
+<p><br /><br /></p>
+
+<p>아래와 같은 에러가 발생했다.</p>
+
+<figure style="display:block; text-align:center;">
+    <img src="/assets/images/bundler_error.png" width="90%" height="90%" title="bundler실행시 에러" alt="bundler실행시 에러나는 화면" /> 
+        <figcaption style="text-align:center; font-size:15px; color:#f00">
+            [!] There was an error parsing `Gemfile`: There are no gemspecs at /home/ashley/seolhee-choi.github.io. Bundler cannot continue.
+        </figcaption><br />
+    <img src="/assets/images/gemfile.png" width="90%" height="10%" title="gemfile선택" alt="Gemfile선택" /> 
+        <figcaption style="text-align:center; font-size:15px; color:#000">
+            사진에 있는 Gemfile을 눌러서 들어간뒤
+        </figcaption><br />
+    <img src="/assets/images/gemfile2.png" width="90%" height="90%" title="gemfile내용 수정1" alt="gemfile내용 수정1" /> 
+        <figcaption style="text-align:center; font-size:15px; color:#000">
+            #gemspec 하단에 아래 3줄을 추가했다.
+        </figcaption><br />
+    <img src="/assets/images/gemfile3.png" width="90%" height="90%" title="gemfile내용 수정2" alt="gemfile내용 수정2" /> <br /><br />
+    <img src="/assets/images/bundler_success.png" width="90%" height="90%" title="bundler성공시 화면" alt="bundler성공시 화면" /> 
+        <figcaption style="text-align:center; font-size:15px; color:#000">
+            다시 'bundle exec jekyll serve' 명령어 입력해보면 정상으로 작동되는 것이 확인됨     
+        </figcaption>
+</figure>]]></content><author><name>Ashley</name></author><category term="ETC" /><category term="etc" /><summary type="html"><![CDATA[깃허브 블로그를 local에서 실행하려고 해당 명령어를 입력한 순간,]]></summary></entry><entry><title type="html">Ubuntu폴더 윈도우(windows)에서 열기</title><link href="http://localhost:4000/ubuntu/ubuntuopen/" rel="alternate" type="text/html" title="Ubuntu폴더 윈도우(windows)에서 열기" /><published>2022-03-10T00:00:00+09:00</published><updated>2022-03-10T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu/ubuntuopen</id><content type="html" xml:base="http://localhost:4000/ubuntu/ubuntuopen/"><![CDATA[<p>windows를 사용하면서 wsl을 설치해 ubuntu를 사용하는 사람이라면
 윈도우에서 ubuntu 폴더를 열어보고 싶은 경우가 있다.
 그럴 때 간단하게 사용하는 명령어는</p>
 
