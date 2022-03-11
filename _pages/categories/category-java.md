@@ -1,5 +1,5 @@
 ---
-title: "java 프로그래밍"
+title: "Java 프로그래밍"
 layout: archive
 permalink: categories/java
 author_profile: true
@@ -7,5 +7,5 @@ sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.java %}
+{% assign posts = site.categories.Java %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

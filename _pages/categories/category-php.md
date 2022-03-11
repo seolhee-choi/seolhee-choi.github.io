@@ -1,5 +1,5 @@
 ---
-title: "php 프로그래밍"
+title: "PHP 프로그래밍"
 layout: archive
 permalink: categories/php
 author_profile: true

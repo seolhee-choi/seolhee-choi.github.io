@@ -1,0 +1,25 @@
+I"G
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/ubuntu/ubuntuopen/">Ubuntu폴더 윈도우(windows)에서 열기</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.03.10
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#ubuntu" class="page__taxonomy-item-category" rel="tag">Ubuntu</a>
+                    
+                    
+                    <a href="/tags/#ubuntu" class="page__taxonomy-item-tag" rel="tag">ubuntu</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+:ET
