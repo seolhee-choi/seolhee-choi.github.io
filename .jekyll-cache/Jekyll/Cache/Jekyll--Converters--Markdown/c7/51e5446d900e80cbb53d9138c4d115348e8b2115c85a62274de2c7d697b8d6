@@ -1,0 +1,25 @@
+I"$<p>한 컬럼에 여러 값이 저장되있는 경우, LIKE를 이용해서 여러 조건을 검색하고 싶었다.<br />
+LIKE와 IN을 함께 쓸 수 있나 찾아봤지만 MySQL에서는 불가능했고😥 
+대체 방안으로 <strong>REGEXP</strong>를 찾아냈다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+       <span class="n">a</span><span class="p">.</span><span class="n">certificate</span> <span class="k">AS</span> <span class="s1">'관심자격증'</span>
+    <span class="k">FROM</span>
+         <span class="s1">'테이블명'</span> <span class="k">AS</span> <span class="n">a</span>
+    <span class="k">WHERE</span>
+        <span class="n">a</span><span class="p">.</span><span class="n">certificate</span> <span class="n">REGEXP</span> <span class="s1">'part2_no57_lecture|part2_no2_lecture'</span>
+    <span class="k">ORDER</span> <span class="k">BY</span>
+        <span class="n">regdate</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<figure style="display:block; text-align:center;">
+    <img src="/assets/images/mysqluse_1.png" width="90%" height="90%" title="쿼리 결과값" alt="쿼리 결과값" /> 
+    <figcaption style="text-align:center; font-size:15px; color:#808080">
+        (기존 데이터들이 json 식으로 저장 되있다..왜 이렇게 저장했을까..아주 엉망진창🤬)<br />
+        위에 쿼리문처럼 입력하면 'part2_no57_lecture' 와 'part2_no2_lecture'가 해당되있는<br />
+        결과값이 조회되는걸 확인할 수 있다.<br />
+        LIKE로만 조건을 검색했더라면 굉장히 길고 효율성없는 쿼리문을 짤 수 밖에없었는데,<br />
+        REGEXP가 날 살렸다!
+    </figcaption>
+</figure>
+:ET

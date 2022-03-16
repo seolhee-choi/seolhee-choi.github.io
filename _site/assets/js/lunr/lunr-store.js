@@ -28,4 +28,10 @@ var store = [{
         "tags": ["etc"],
         "url": "/etc/bundlererror/",
         "teaser": null
+      },{
+        "title": "MySQL에서 LIKE IN 대신 사용가능한 REGEXP",
+        "excerpt":"한 컬럼에 여러 값이 저장되있는 경우, LIKE를 이용해서 여러 조건을 검색하고 싶었다.  LIKE와 IN을 함께 쓸 수 있나 찾아봤지만 MySQL에서는 불가능했고😥  대체 방안으로 REGEXP를 찾아냈다.   SELECT        a.certificate AS '관심자격증'     FROM          '테이블명' AS a     WHERE         a.certificate REGEXP 'part2_no57_lecture|part2_no2_lecture'     ORDER BY         regdate DESC;                       (기존 데이터들이 json 식으로 저장 되있다..왜 이렇게 저장했을까..아주 엉망진창🤬)          위에 쿼리문처럼 입력하면 'part2_no57_lecture' 와 'part2_no2_lecture'가 해당되있는          결과값이 조회되는걸 확인할 수 있다.          LIKE로만 조건을 검색했더라면 굉장히 길고 효율성없는 쿼리문을 짤 수 밖에없었는데,          REGEXP가 날 살렸다!       ","categories": ["MySQL"],
+        "tags": ["mysql"],
+        "url": "/mysql/mysqluse_1/",
+        "teaser": null
       }]
