@@ -1,0 +1,109 @@
+I"�&<h3>큐 구조</h3>
+
+<ul>
+  <li>가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조</li>
+  <li>FIFO(First in First out) / LILO(Last in Last out)방식으로 이루어짐</li>
+  <li>큐에는 Enqueue(add(value), offer(value))와 Dequeue(poll(), remove()) 종류가 있음</li>
+</ul>
+
+<p>Queue를 사용하기 위해서는 LinkedList 클래스를 사용해야하고,<br />
+어떤 데이터타입을 사용할건지 자료형 매개변수를 넣어서 지정해줘야함</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test_queue</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">q_int</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">q_str</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br /><br />
+💡Enqueue와 Dequeue</p>
+
+<ul>
+  <li>
+    <dl>
+      <dt>큐에 데이터를 추가하기 위해서는 add(value) , offer(value)를 사용<br /></dt>
+      <dd>q_int.add(1),q_int.offer(2);</dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>큐에 들어있는 데이터를 출력할 때는 해당 인스턴스를 사용<br /></dt>
+      <dd><code class="language-plaintext highlighter-rouge">System.out.println(q_int);</code> ⇒ [1, 2]<br /></dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>큐에 들어있는 첫 번째 값을 반환하고, 해당 첫 번째 값을 삭제할때는 poll이나 remove를 사용<br /></dt>
+      <dd>q_int.poll(); , q_int_remove() <br />
+  ⇒ 큐에 들어있는 첫 번째 값은 1이므로 1이 삭제되고 2만 남는다.</dd>
+    </dl>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test_queue</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">q_int</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">q_str</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+
+        <span class="n">q_int</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+        <span class="n">q_int</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+
+        <span class="n">q_str</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"m"</span><span class="o">);</span>
+        <span class="n">q_str</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">"om"</span><span class="o">);</span>
+        <span class="n">q_str</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_str</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p><br /><br /><br />
+📝Enqueue와 Dequeue를 사용해보자</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test_queue</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;();</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">enqueue</span><span class="o">(</span><span class="no">T</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+
+	<span class="c1">//데이터를 꺼내오는거라 별도의 인자가 없음</span>
+    <span class="kd">public</span> <span class="no">T</span> <span class="nf">dequeue</span><span class="o">()</span> <span class="o">{</span> 
+        <span class="k">if</span> <span class="o">(</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">//Test_queue 클래스가 데이터를 갖고있는지 여부를 확인하기 위한 메소드</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">()</span> <span class="o">{</span> 
+        <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Test_queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">tq</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test_queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+        <span class="n">tq</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>  <span class="c1">//1을 넣고</span>
+        <span class="n">tq</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>  <span class="c1">//2를 넣고</span>
+        <span class="n">tq</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>  <span class="c1">//3을 넣었다</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">tq</span><span class="o">.</span><span class="na">dequeue</span><span class="o">());</span> <span class="c1">//1을 빼고</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">tq</span><span class="o">.</span><span class="na">dequeue</span><span class="o">());</span> <span class="c1">//2를 빼고</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">tq</span><span class="o">.</span><span class="na">dequeue</span><span class="o">());</span> <span class="c1">//3을 뺌</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>값은 순서대로 1 2 3 이 출력된다.</p>
+:ET
