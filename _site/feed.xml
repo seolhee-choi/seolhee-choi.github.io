@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-04T17:12:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ash Blog</title><subtitle>이것저것 기록 일지.</subtitle><author><name>Ashley</name></author><entry><title type="html">List와 ArrayList의 차이</title><link href="http://localhost:4000/algorithm/algorithm_list_arraylist/" rel="alternate" type="text/html" title="List와 ArrayList의 차이" /><published>2022-04-04T00:00:00+09:00</published><updated>2022-04-04T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm_list_arraylist</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm_list_arraylist/"><![CDATA[<h3>List와 ArrayList의 차이</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-04T17:15:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ash Blog</title><subtitle>이것저것 기록 일지.</subtitle><author><name>Ashley</name></author><entry><title type="html">List와 ArrayList의 차이</title><link href="http://localhost:4000/algorithm/algorithm_list_arraylist/" rel="alternate" type="text/html" title="List와 ArrayList의 차이" /><published>2022-04-04T00:00:00+09:00</published><updated>2022-04-04T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm_list_arraylist</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm_list_arraylist/"><![CDATA[<h3>List와 ArrayList의 차이</h3>
 
 <p>List는 인터페이스고 ArrayList는 클래스이다.</p>
 
@@ -137,7 +137,8 @@
         <span class="n">q_str</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">"om"</span><span class="o">);</span>
         <span class="n">q_str</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
 
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_str</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_int</span><span class="o">);</span> <span class="c1">// 1,2가 출력됨</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_str</span><span class="o">);</span> <span class="c1">// "m"이 제거되어 "om"만 출력됨</span>
     <span class="o">}</span>
 
 <span class="o">}</span>

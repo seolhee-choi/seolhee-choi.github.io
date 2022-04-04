@@ -64,7 +64,8 @@ public class Test_queue {
         q_str.offer("om");
         q_str.poll();
 
-        System.out.println(q_str);
+        System.out.println(q_int); // 1,2가 출력됨
+        System.out.println(q_str); // "m"이 제거되어 "om"만 출력됨
     }
 
 }

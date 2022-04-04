@@ -1,4 +1,4 @@
-I"�&<h3>큐 구조</h3>
+I"�'<h3>큐 구조</h3>
 
 <ul>
   <li>가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조</li>
@@ -61,7 +61,8 @@
         <span class="n">q_str</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">"om"</span><span class="o">);</span>
         <span class="n">q_str</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
 
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_str</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_int</span><span class="o">);</span> <span class="c1">// 1,2가 출력됨</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">q_str</span><span class="o">);</span> <span class="c1">// "m"이 제거되어 "om"만 출력됨</span>
     <span class="o">}</span>
 
 <span class="o">}</span>
