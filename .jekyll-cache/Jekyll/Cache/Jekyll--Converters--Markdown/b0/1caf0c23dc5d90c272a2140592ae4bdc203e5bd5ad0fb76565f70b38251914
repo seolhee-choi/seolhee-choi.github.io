@@ -1,0 +1,49 @@
+I"{
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/etc/notion_logout/">Notion 로그아웃(원격 로그아웃)</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.04.05
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#etc" class="page__taxonomy-item-category" rel="tag">ETC</a>
+                    
+                    
+                    <a href="/tags/#etc" class="page__taxonomy-item-tag" rel="tag">etc</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/etc/bundlererror/">There are no gemspecs at 오류 발생시 해결방안</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.03.11
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#etc" class="page__taxonomy-item-category" rel="tag">ETC</a>
+                    
+                    
+                    <a href="/tags/#etc" class="page__taxonomy-item-tag" rel="tag">etc</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+:ET

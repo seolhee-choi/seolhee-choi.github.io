@@ -1,15 +1,15 @@
 ---
-title : "GET 방식으로 할인 쿠폰 발급하는 방법"
-categories:
- - Php
-tags:
- - [ php ] 
+# title : "GET 방식으로 할인 쿠폰 발급하는 방법"
+# categories:
+#  - Php
+# tags:
+#  - [ php ] 
 
-toc: true
-toc_sticky: true
+# toc: true
+# toc_sticky: true
 
-date: 2022-02-22
-last_modified_at: 2022-02-22
+# date: 2022-02-22
+# last_modified_at: 2022-02-22
 
 ---
 

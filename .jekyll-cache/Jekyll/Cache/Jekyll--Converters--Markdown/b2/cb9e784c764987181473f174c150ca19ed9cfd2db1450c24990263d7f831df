@@ -1,0 +1,74 @@
+I"`<h3>스택(Stack)</h3>
+
+<p>스택은 LIFO(Last In, First Out) 또는 FILO(First In, Last Out) 데이터 관리 방식을 따름<br /><br /></p>
+
+<ul>
+  <li>LIFO : 마지막에 넣은 데이터를 가장 먼저 추출함</li>
+  <li>FILO : 처음에 넣은 데이터를 가장 마지막에 추출함</li>
+  <li>데이터를 스택에 넣는건 push() / 데이터를 스택에서 꺼내는건 pop()
+<br /><br />
+💡큐(Queue)가 FIFO 라면, 스택(Stack)은 LIFO
+<br /><br /><br /><br />
+대표적인 장점</li>
+  <li>구조의 단순화/ 데이터의 저장,읽기 속도 빠름<br />
+<br />
+대표적인 단점</li>
+  <li>데이터 최대 개수를 미리 정해야 하고, 미리 정한만큼 쓰지 못하면 저장공간의 낭비 발생
+<br /><br /><br /><br /><br /><br />
+push와 pop을 이용한 예제코드</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test_stack</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//1이 추가됨</span>
+        <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span> <span class="c1">//2가 추가됨</span>
+        <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span> <span class="c1">//3이 추가됨</span>
+
+        <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span> <span class="c1">//3이 제거됨</span>
+        <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span> <span class="c1">//2가 제거됨</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">stack</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br /><br /><br /><br />
+ArrayList를 이용해서 Stack(스택)에 데이터를 넣고 빼보자</p>
+
+<p>```java
+import java.util.ArrayList;</p>
+
+<p>public class Test_stack<T> {
+   private ArrayList<T> stack = new ArrayList<T>();</T></T></T></p>
+
+<p>public void push(T i) { //void는 return해 줄 필요가 없을 때 사용하는 자료형
+       stack.add(i); //add는 ArrayList의 객체
+   }</p>
+
+<p>public T pop() {
+      if(stack.isEmpty()) {
+         return null;
+      }
+      //stack의 사이즈를 알 수 없기때문에 size 메소드로 값을 구한 뒤 -1을 해주면 끝자리 값이 삭제됨
+      return stack.remove(stack.size() - 1);
+   }</p>
+
+<p>public boolean isEmpty() {
+      return stack.isEmpty();
+   }</p>
+
+<p>public static void main(String[] args) {
+      Test_stack<Integer> ts = new Test_stack<Integer>();
+      ts.push(1); //1을 넣고
+      ts.push(2); //2를 넣고
+      System.out.println(ts.pop()); //2가 출력되고 값이 빠짐
+      ts.push(3); //3을 넣고
+      System.out.println(ts.pop()); //3이 출력되고 값이 빠짐
+      System.out.println(ts.pop()); //남은 값은 1로, 1이 출력됨
+			//2 3 1 순으로 출력된다.
+   }
+}</Integer></Integer></p>
+
+:ET
